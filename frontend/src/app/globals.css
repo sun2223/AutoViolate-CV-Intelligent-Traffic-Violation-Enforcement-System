@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #0b0c10;
+  --foreground: #c5c6c7;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(233, 69, 96, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 212, 255, 0.1), transparent 25%);
+  background-attachment: fixed;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl;
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+  }
+}
