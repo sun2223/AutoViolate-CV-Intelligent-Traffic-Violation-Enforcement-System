@@ -46,7 +46,7 @@ export default function Home() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("https://autoviolate-cv-intelligent-traffic.onrender.com/api/analyze", {
+      const res = await fetch("https://stargazer-jolt-refinance.ngrok-free.dev/api/analyze", {
         method: "POST",
         body: formData,
       });
