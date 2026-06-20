@@ -8,8 +8,15 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# Ensure src can be imported
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Ensure our app directory is exactly first in path, and remove the parent directory
+# to prevent 'src' namespace collisions on Render (which clones into a folder named 'src')
+app_dir = os.path.abspath(os.path.dirname(__file__))
+parent_dir = os.path.dirname(app_dir)
+
+if parent_dir in sys.path:
+    sys.path.remove(parent_dir)
+if app_dir not in sys.path:
+    sys.path.insert(0, app_dir)
 
 from src.inference.pipeline import TrafficViolationInference
 from src.visualization.visualizer import draw_violations
