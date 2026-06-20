@@ -13,6 +13,7 @@
 **AutoViolate-CV** is a production-grade, modular computer vision prototype for automated identification, classification, documentation, and reporting of traffic violations from image and video data. Built for Kaggle evaluation with GPU acceleration, it covers all 8 required violation categories end-to-end.
 
 ---
+project link :https://autoviolate-ui.vercel.app/
 
 ## Architecture
 
