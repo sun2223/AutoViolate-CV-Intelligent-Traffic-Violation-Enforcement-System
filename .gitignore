@@ -1,0 +1,36 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Project specific
+showcase_output/
+models/
+outputs/
+reports/
+data/synthetic/
+
+# Zip files
+*.zip
+*.tar.gz
+*.rar
+
+# Node/Next.js (Frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
