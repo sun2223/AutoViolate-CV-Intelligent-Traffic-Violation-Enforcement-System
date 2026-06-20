@@ -16,10 +16,11 @@ __pycache__/
 
 # Project specific
 showcase_output/
-models/
 outputs/
 reports/
 data/synthetic/
+*.pt
+*.onnx
 
 # Zip files
 *.zip
